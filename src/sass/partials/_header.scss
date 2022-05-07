@@ -1,0 +1,56 @@
+.header {
+  &-wrapper {
+    margin: 42px 0 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  color: $primary-text-color;
+  align-items: center;
+  cursor: pointer;
+  transition: all 250ms ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+  & span:first-child {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27.1472px;
+    line-height: 33px;
+    margin-right: 5px;
+  }
+
+  & span:last-child {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27.1472px;
+    line-height: 33px;
+  }
+}
+
+.navigation {
+  min-width: 645px;
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-list a {
+    color: $primary-text-color;
+    cursor: pointer;
+    transition: all 250ms ease;
+  }
+
+  &-list a:hover {
+    color: $secondary-color;
+  }
+}

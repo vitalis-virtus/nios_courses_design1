@@ -1,6 +1,24 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+//font
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-// Стили для файла с примером HTML-фрагмента
+//helpers
+@import './utils/_variables';
+@import './utils/_mixins';
+@import './utils/_placeholders';
+
+//containers
+@import './utils/containers';
+
+//base
+@import './utils/_base-noralize';
+
+//partials
+@import './partials/header';
+@import './partials/main-hero';
+@import './partials/clients';
+@import './partials/business-help';
+@import './partials/video-block';
+@import './partials/client-say';
+@import './partials/subscribe';
+@import './partials/footer';
