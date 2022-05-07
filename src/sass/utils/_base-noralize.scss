@@ -1,0 +1,51 @@
+body {
+  margin: 0 auto;
+  font-family: "Manrope";
+  max-width: 1440px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: #000000;
+}
+
+p{
+  color: $seconday-text-color;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
