@@ -24,9 +24,14 @@ $bgc-color-wallet: #fff7e3;
 $bgc-color-code: #fff2f8;
 $bgc-color-analysis: #deffee;
 
-  // блакитний фон під бізнес-блоком
+// блакитний фон під бізнес-блоком
 $business-block-bgc: #f4f9ff;
 
 //кольори для псевдоелементів в блоці vido-block
 $video-block-content-bgc: #eff1ff;
 $video-block-video-bgc: #fff5db;
+
+//розміри екранів
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1440px;

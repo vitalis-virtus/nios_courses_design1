@@ -1,14 +1,22 @@
 body {
+  font-family: 'Manrope';
+
+  max-width: 338px;
   margin: 0 auto;
-  font-family: "Manrope";
-  max-width: 1440px;
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 832px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 1440px;
+  }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
 
 html {
   box-sizing: border-box;
@@ -40,7 +48,7 @@ p {
   color: #000000;
 }
 
-p{
+p {
   color: $seconday-text-color;
 }
 
@@ -48,4 +56,3 @@ input:focus,
 button:focus {
   outline: none;
 }
-

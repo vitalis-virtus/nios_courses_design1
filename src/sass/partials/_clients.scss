@@ -1,5 +1,15 @@
 .clients {
-  display: flex;
+  text-align: center;
+  padding-top: 30px;
+
+  @media screen and(min-width: $tablet) {
+    padding-top: 50px;
+  }
+  @media screen and(min-width: $desktop) {
+    padding-top: 0;
+    text-align: left;
+    display: flex;
+  }
 
   & h2 {
     font-style: normal;
@@ -17,24 +27,47 @@
   }
 
   &-content {
-    margin-right: 60px;
+    @media screen and(min-width: $desktop) {
+      margin-right: 60px;
+    }
   }
 
   &-list {
-    display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
+
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media screen and(min-width: $desktop) {
+      flex-wrap: nowrap;
+      margin-top: 50px;
+    }
   }
 
   &-list li:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 30px;
+
+    @media screen and(min-width: $tablet) {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+    @media screen and(min-width: $desktop) {
+      margin-right: 50px;
+    }
   }
 }
 
 .amazon {
   &-link {
     display: block;
-    position: relative;
-    margin-top: 20px;
+    padding-top: 10px;
+    @media screen and(min-width: $tablet) {
+      padding: 0;
+      padding-top: 22px;
+    }
   }
 }

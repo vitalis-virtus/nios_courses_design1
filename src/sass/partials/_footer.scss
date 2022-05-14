@@ -1,16 +1,28 @@
 .footer {
   &-wrapper {
-    margin-top: 245px;
-    padding: 63px 0 29px 0;
+    margin-top: 75px;
+    padding: 33px 0 29px 0;
     border-top: 1px solid $dots-color;
     border-bottom: 1px solid $dots-color;
-
-    display: flex;
+    @media screen and(min-width: $tablet) {
+      
+      display: flex;
+    }
+    @media screen and(min-width: $desktop) {
+      justify-content: start;
+      margin-top: 245px;
+    }
   }
 
   &-description {
-    margin-right: 191px;
-    max-width: 270px;
+    @media screen and(min-width: $tablet) {
+      max-width: 200px;
+      margin-right: 50px;
+    }
+    @media screen and(min-width: $desktop) {
+      margin-right: 191px;
+      max-width: 270px;
+    }
   }
 
   &-description .logo {
@@ -19,13 +31,22 @@
 
   &-description p {
     color: $seconday-text-color;
-    margin-bottom: 40px;
     font-size: 14px;
     line-height: 160%;
+    margin-bottom: 15px;
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 40px;
+    }
   }
 
   &-social-links {
     display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    @media screen and(min-width: $desktop) {
+      margin: 0;
+      justify-content: start;
+    }
   }
 
   &-social-links li:not(:last-child) {
@@ -39,8 +60,15 @@
 
   &-menu {
     display: flex;
-    width: 100%;
+    max-width: 400px;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and(min-width: $desktop) {
+      flex-wrap: nowrap;
+      width: 100%;
+      max-width: 100%;
+      
+    }
   }
 
   &-menu h3 {

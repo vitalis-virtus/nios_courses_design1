@@ -1,35 +1,58 @@
 .business {
   &-content {
-    margin-top: 360px;
-    margin-right: 91px;
     position: relative;
     z-index: 4;
+    text-align: center;
+    margin-top: 40px;
+
+    margin-bottom: 30px;
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 0;
+      text-align: left;
+      margin-right: 91px;
+      margin-top: 360px;
+    }
   }
 
   //жовта фігура перед блоком текста
   &-content::before {
     content: '';
     position: absolute;
-    width: 178px;
-    height: 178px;
-    left: -46px;
-    top: -60px;
+    width: 138px;
+    height: 138px;
+    left: -10px;
+    top: -40px;
     display: inline-block;
     background-color: $img-after-bgc;
     border-radius: 0px 0px 100px 0px;
     transform: rotate(-180deg);
     z-index: -1;
+
+    @media screen and(min-width: $desktop) {
+      width: 178px;
+      height: 178px;
+      left: -46px;
+      top: -60px;
+    }
   }
 
   &-wrapper {
     margin-top: 94px;
-    display: flex;
     position: relative;
+    overflow: hidden;
+    @media screen and(min-width: $tablet) {
+            overflow: visible;
+
+    }
+
+    @media screen and(min-width: $desktop) {
+      overflow: visible;
+      display: flex;
+    }
   }
 
   //сині точки під блоком текста
   &-wrapper::after {
-    content: '';
     display: block;
     position: absolute;
     bottom: 68px;
@@ -42,13 +65,19 @@
     background-image: radial-gradient(circle, $dots-color-business 3.5px, transparent 3.5px),
       radial-gradient(circle, $dots-color-business 3.5px, transparent 3.5px);
     z-index: -40;
+
+    @media screen and(min-width:$desktop) {
+      content: '';
+    }
   }
   &-content h2 {
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 32px;
     line-height: 49px;
-    margin-bottom: 30px;
   }
 
   &-content p {
@@ -61,28 +90,42 @@
 
   &-block-section {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 650px;
     z-index: 0;
+
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media screen and(min-width:$desktop) {
+      min-width: 650px;
+    }
   }
 
   // блакитний фон під бізнес-блоком
   &-block-section::before {
-    content: '';
-    width: 953px;
+    width: 732px;
     height: 619px;
     background-color: $business-block-bgc;
-    border-radius: 150px 0px 0px 0px;
+    border-radius: 150px 0px 0px 150px;
     position: absolute;
-    top: 145px;
-    left: -160px;
+    top: 50px;
+    left: 0;
     z-index: -4;
+    @media screen and(min-width:$tablet) {
+      content: '';
+    }
+    @media screen and(min-width: $desktop) {
+      border-radius: 150px 0px 0px 0px;
+
+      width: 953px;
+      top: 145px;
+      left: -160px;
+    }
   }
 
   //рожеве коло після бізнес-блока
   &-block-section::after {
-    content: '';
     position: absolute;
     width: 120px;
     height: 120px;
@@ -90,9 +133,19 @@
     border: 8.8px solid #ff007a;
     border-radius: 100%;
     position: absolute;
-    top: 730px;
-    left: 580px;
+    top: 700px;
+    left: 610px;
     z-index: -5;
+
+    @media screen and(min-width:$tablet) {
+      content: '';
+    }
+    @media screen and(min-width: $desktop) {
+      width: 120px;
+      height: 120px;
+      top: 730px;
+      left: 580px;
+    }
   }
 
   &-block {
@@ -104,18 +157,42 @@
     border: 1px solid $business-block-border;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
     border-radius: 40px;
+
+    margin-bottom: 15px;
+    @media screen and(min-width:$tablet) {
+      margin-bottom: 0;
+    }
   }
 
   &-block:nth-child(odd) {
-    margin-right: 34px;
+    @media screen and(min-width: $tablet) {
+      margin-right: 15px;
+    }
+    @media screen and(min-width:$desktop) {
+      margin-right: 34px;
+    }
   }
+  &-block:nth-child(even) {
+    @media screen and(min-width: $tablet) {
+      margin-bottom: 15px;
+    }
+  }
+
   &-block:first-child {
-    margin-top: 79px;
-    margin-bottom: 30px;
+    @media screen and(min-width:$desktop) {
+      margin-bottom: 30px;
+      margin-top: 79px;
+    }
   }
 
   &-block:last-child {
-    margin-top: -78px;
+    @media screen and(min-width: $tablet) {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+    @media screen and(min-width:$desktop) {
+      margin-top: -78px;
+    }
   }
 
   &-block h3 {
